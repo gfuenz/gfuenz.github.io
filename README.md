@@ -34,7 +34,7 @@ bundle exec jekyll serve
 Your `_config.yml` could for example look like this:
 
 ```yaml
-title: "Blog Title"
+title: Gabriela Fuenzalida
 author: "Blog Author"
 description: "My blog"
 permalink: /:title/
