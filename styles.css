@@ -201,11 +201,22 @@ a:hover {
   transform: translateY(-4px);
 }
 
+.welcome-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
 .hero-headshot-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
+  order: 1;
+}
+
+.welcome-panel {
+  order: 2;
 }
 
 .headshot-upload {
