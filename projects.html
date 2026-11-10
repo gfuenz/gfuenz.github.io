@@ -16,9 +16,11 @@
         <div class="brand">Gabriela Fuenzalida</div>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="index.html">Home</a>
+          <a href="about.html">About Me</a>
           <a href="resume.html">Resume</a>
           <a href="goals.html">Career Goals</a>
           <a href="projects.html" class="active">Projects</a>
+          <a href="interests.html">Interests and Hobbies</a>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
@@ -27,8 +29,7 @@
     <main>
       <section class="page-hero">
         <div class="container page-hero-inner">
-          <p class="eyebrow">Discovery Project Feature</p>
-          <h1>FM Radio Transmitter</h1>
+          <h1>Projects</h1>
         </div>
       </section>
 
@@ -36,59 +37,48 @@
         <div class="container">
           <div class="project-feature page-panel single-project">
             <div class="project-feature-image">
-              <label class="project-photo-upload" for="projectPhotoUpload" aria-label="Upload project photo">
-                <img
-                  src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=1200&q=80"
-                  alt="Electronic circuit on a bench"
-                  class="project-photo-preview"
-                />
-              </label>
-              <input id="projectPhotoUpload" type="file" accept="image/*" />
-              <p class="upload-caption">Upload your own project photo here.</p>
+              <img src="assets/project-img-8279.jpg" alt="Arduino FM radio prototype with its LCD display" />
+              <img src="assets/project-img-8280.jpg" alt="Close-up of the Arduino and LCD wiring for the FM radio" />
             </div>
             <div class="project-feature-copy">
+              <p class="eyebrow">Project Overview</p>
+              <h3>**unfinished**Arduino FM Radio</h3>
+              <p><strong>Fall 2026 - ECE 1100 - Discovery Project</strong></p>
+              <p><strong>Arduino, C/C++</strong></p>
+              <p>Based on a tutorial by educ8s.tv</p>
+              <p>
+                Using an Arduino Nano, I built an FM radio receiver that tunes between 87 and 107 MHz and displays the frequency on an LCD. I chose this project to improve my programming skills and learn about how radio signals are processed.
+              </p>
+
               <p class="eyebrow">The Problem</p>
-              <h3>Building a system that can transmit audio clearly through radio frequency</h3>
               <p>
-                The goal of my Discovery Project was to design and build an FM radio transmitter that could convert audio into a signal capable of being received by a nearby FM receiver. This was a valuable challenge because it required me to connect theory to a practical design problem. I had to think carefully about how sound could be encoded, how a carrier wave could be modulated, and how the components of a circuit would interact to produce a stable output. Rather than working with a simple textbook example, I had to consider the actual design decisions that influence signal quality, range, and reliability.
-              </p>
-              <p>
-                One of the main challenges was understanding how to generate and modulate a high-frequency signal while preserving the audio information clearly. Frequency modulation is a concept that is easier to understand in theory than in practice because small changes in circuit components can affect the output significantly. I needed to think about how the oscillator, modulation stage, and antenna would work together to create a useful transmitter. This required both analytical thinking and experimentation, which made the project a meaningful introduction to real circuit design.
-              </p>
-              <p>
-                The project also helped me identify the difference between a theoretical circuit and a working one. In the classroom, technical concepts can seem straightforward, but once the circuit is built, you must consider power limitations, signal stability, component tolerance, and layout effects. Those factors are part of the engineering reality, and they are what make the design process both challenging and rewarding.
+                Radios are everywhere, but I did not understand how a signal gets from a device to a radio. For my ECE 1100 Discovery Project, I wanted to learn about this topic. My overall goal was to use an Arduino Nano to build an FM radio receiver that could tune to a station and play it through a speaker. I chose this project because I desired to strengthen my programming skills in C/C++ and learn how radio signals are received and processed, as well as to explore my interest in radar and sensing.
               </p>
 
               <p class="eyebrow">The Process</p>
               <p>
-                I began by researching the principles behind FM transmission and learning how modulation changes the carrier wave. This gave me a framework for how the audio signal would influence the frequency of the transmitted signal. From there, I designed the circuit based on electrical engineering fundamentals, selecting components and thinking through how each stage would contribute to the final output. I used analysis to estimate how the circuit should behave before testing it in practice.
+                The design uses an Arduino Nano as the controller and a TEA5767 FM radio module as the receiver. The Arduino Nano communicates with the module over the I2C interface, and a potentiometer sets the frequency. The Arduino reads the frequency’s analog value from this potentiometer, then maps it to a frequency that is between 87 and 107 MHz. A second potentiometer controls the volume. I wired the parts together on a breadboard, and I coded what was needed for the Nano to communicate properly.
               </p>
               <p>
-                Once the design was created, I moved into the testing and troubleshooting phase. This part of the process was just as important as the initial design because it revealed how the circuit behaved in reality. I tested the signal, adjusted components, and refined the setup to improve stability and clarity. In some cases, the circuit did not behave exactly as expected, which meant I had to revisit the design and reason through why the signal was distorted or unstable. These adjustments were essential in helping the system function properly.
-              </p>
-              <p>
-                This stage reinforced the idea that engineering design is iterative. A project rarely works perfectly on the first attempt, and the ability to diagnose issues, test new ideas, and improve the design is one of the most important skills in engineering. I learned to be patient, observant, and systematic while troubleshooting. That process turned theory into practical experience and helped me build stronger technical judgment.
+                The module’s audio signal is very weak, so I sent the signal through an LM386 amplifier module to a small speaker. To see the tuned frequency, I used a Nokia 5110 LCD. I ran into some problems due to the materials I had. I needed to strip wire for multiple connections, including the speaker, so the volume of the noise that came out of the speaker was very faint. In the future, I could get a different speaker that would connect better.
               </p>
 
               <p class="eyebrow">The Outcome</p>
               <p>
-                The result of this project was a working FM radio transmitter prototype that demonstrated the principles of frequency modulation and circuit design. The system successfully produced a signal that could be received by an FM receiver at a short distance, showing that the design concept was valid and the circuit was functioning as intended. Beyond the technical result, the project helped me build confidence in my ability to design, test, and improve a real electronic system.
-              </p>
-              <p>
-                This was an especially valuable experience because it allowed me to see how power, signal integrity, and component selection all influence the outcome of an engineering project. It also helped me understand how design decisions affect performance in ways that are not always obvious from equations alone. Overall, the FM radio transmitter project gave me a stronger foundation in circuit design, troubleshooting, and practical problem solving, and it deepened my interest in electronics and communication systems.
+                In the end, the radio would receive the stations and my code worked, but the audio quality was very poor due to my limited supplies. The tutorial I followed states that the radio module’s own output was clean, so my weak point was the amplification and speaker. Some improvements I could consider are a better amplifier and speaker or a fine-tuning control. Overall, I learned how I2C communication works through Arduino, and I improved my programming skills.
               </p>
               <div class="project-details">
                 <div>
                   <strong>Role</strong>
-                  <span>Student Engineer / Circuit Designer</span>
+                  <span>Student Engineer / Programmer</span>
                 </div>
                 <div>
                   <strong>Focus</strong>
-                  <span>FM modulation, circuit analysis, transmitter design, troubleshooting</span>
+                  <span>Arduino programming, radio signal processing, I2C communication</span>
                 </div>
                 <div>
                   <strong>Outcome</strong>
-                  <span>Functional FM transmitter prototype built and evaluated</span>
+                  <span>Functional FM radio receiver prototype with room for audio improvement</span>
                 </div>
               </div>
             </div>
@@ -101,30 +91,12 @@
       <div class="container footer-inner">
         <div>
           <p class="footer-title">Gabriela Fuenzalida</p>
-          <p>Project-driven engineering student</p>
         </div>
         <div class="footer-links">
-          <a href="contact.html">Contact</a>
+          <a href="interests.html">Interests and Hobbies</a>
         </div>
       </div>
     </footer>
 
-    <script>
-      const projectPhotoInput = document.getElementById('projectPhotoUpload');
-      const projectPhotoPreview = document.querySelector('.project-photo-preview');
-
-      if (projectPhotoInput && projectPhotoPreview) {
-        projectPhotoInput.addEventListener('change', function () {
-          const file = this.files && this.files[0];
-          if (!file) return;
-
-          const reader = new FileReader();
-          reader.onload = function (event) {
-            projectPhotoPreview.src = event.target.result;
-          };
-          reader.readAsDataURL(file);
-        });
-      }
-    </script>
   </body>
 </html>

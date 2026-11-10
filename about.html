@@ -2,17 +2,66 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=index.html#about" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting to About Me</title>
+    <title>About Me | Gabriela Fuenzalida</title>
+    <meta name="description" content="About Me page for Gabriela Fuenzalida's ECE ePortfolio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main style="min-height:100vh; display:grid; place-items:center; text-align:center; padding:2rem;">
-      <div>
-        <h1>Redirecting to the About Me section...</h1>
-        <p><a href="index.html#about">Click here if you are not redirected automatically.</a></p>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">Gabriela Fuenzalida</div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About Me</a>
+          <a href="resume.html">Resume</a>
+          <a href="goals.html">Career Goals</a>
+          <a href="projects.html">Projects</a>
+          <a href="interests.html">Interests and Hobbies</a>
+          <a href="contact.html">Contact</a>
+        </nav>
       </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <h1>About Me</h1>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container">
+          <div class="about-copy page-panel">
+            <p>
+              My face lit up as my code came to life, and a motor began moving back and forth. Three classmates and I were tasked with building a knee actuator exoskeleton, and my job was to code the mechanisms for the motor. Getting to this point was not easy, as we struggled with the initial designs. Each member of our team focused on a different aspect of the exoskeleton, collaborating throughout the design and building process. This moment in my high school career was when I realized how much I enjoy the teamwork side of engineering and decided to pursue electrical engineering further.
+            </p>
+            <p>
+              When researching for the project, I learned about the broad applications of electrical engineering in the medical field. I have always wanted to work in an area that helps others, and a device like this could help people who are unable to move their knee. Picturing how engineering can be used for the benefit of others made this project feel like it mattered beyond the classroom.
+            </p>
+            <p>
+              I have also always loved art, and I have found that it also shapes how I think about the problems I encounter. Art has taught me to use creativity, which merges well with engineering and problem-solving.
+            </p>
+            <p>
+              I am currently a first-year Electrical Engineering major at Georgia Tech and minoring in Spanish. I am excited to utilize the opportunities at Georgia Tech and am hoping to join a build team in the coming semester. By minoring in Spanish and taking classes abroad, I am aiming to improve my Spanish-speaking skills to bridge language gaps in the workplace. I am particularly interested in radar and remote sensing and how these sensing technologies can be used in biomedical devices. I plan on exploring these areas throughout my college career.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">Gabriela Fuenzalida</p>
+        </div>
+        <div class="footer-links">
+          <a href="resume.html">Resume</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
